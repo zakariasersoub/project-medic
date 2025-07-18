@@ -1,0 +1,78 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="preload" href="important-image.webp" as="image">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Login Page</title>
+</head>
+
+<body>
+
+
+
+  <main class="login-container">
+    <div class="login-wrapper">
+      <header class="login-header">
+        <div class="logo-container">
+          <!-- REPLACE WITH YOUR LOGO IMAGE -->
+          <img src="images/logo.svg" alt="App Logo" class="logo" />
+          <p>Divo</p>
+        </div>
+        <h1 class="welcome-text">Welcome back</h1>
+        <p class="welcome-description">Please enter your details to sign in</p>
+      </header>
+
+      <form class="login-form" aria-label="Login form" action="login.php" method="post">
+        <div class="form-fields">
+          <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <div class="input-wrapper">
+              <div class="input-icon">
+                <img src="images/message.svg" alt="">
+              </div>
+              <input type="email" id="email" name="email" placeholder="Enter your email" class="form-input" aria-label="Email input"
+                required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="password" class="form-label">Password</label>
+            <div class="input-wrapper">
+              <div class="input-icon">
+                <img src="images/clock.svg" alt="eye">
+              </div>
+              <input type="password" id="password" name="password" placeholder="Enter your password" class="form-input"
+                aria-label="Password input" required />
+              <button type="button" class="toggle-password" aria-label="Toggle password visibility">
+                <img src="images/eye.svg" alt="eye">
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-options">
+          <div class="remember-me">
+            <input type="checkbox" id="remember" class="remember-checkbox" />
+            <label for="remember" class="remember-label">Remember me</label>
+          </div>
+          <a href="#" class="forgot-password">Forgot Password?</a>
+        </div>
+
+        <button type="submit" class="submit-button">Sign in</button>
+      </form>
+
+      <div class="signup-prompt">
+        <span class="signup-text">Don't have an account?</span>
+        <a href="../Register Page/" class="signup-link">Create account</a>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

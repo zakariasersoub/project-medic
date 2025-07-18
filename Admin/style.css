@@ -1,0 +1,753 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif;
+  background-color: rgb(249, 250, 251);
+}
+
+/* أضف هذا في ملف CSS */
+img {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+img.loading {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+img.loaded {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.dashboard-layout {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+/* Fixed Sidebar Styles */
+.sidebar {
+  position: fixed; /* Changed to fixed positioning */
+  top: 0;
+  left: 0;
+  bottom: 0; /* Stretch from top to bottom */
+  width: 256px;
+  background-color: #1e293b;
+  overflow-y: auto; /* Allow scrolling if content is too tall */
+  z-index: 100; /* Ensure it stays above other content */
+  display: flex;
+  flex-direction: column;
+  /* Remove margin-bottom as it's not needed with fixed positioning */
+}
+
+.main-content {
+  flex: 1;
+  padding: 16px 32px;
+  margin-left: 256px; /* Add margin to prevent content from being hidden behind sidebar */
+  width: calc(100% - 256px); /* Calculate remaining width */
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .sidebar {
+    display: none; /* Hide sidebar on smaller screens */
+  }
+  
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 16px;
+  }
+}
+  .logo-container {
+    display: flex;
+    height: 64px;
+    padding: 13px 90.815px 0 24px;
+    align-items: center;
+  }
+  .logo-container p {
+    display: flex;
+    width: 93.385px;
+    height: 25.097px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #FFF;
+
+    font-size: 22px;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 3.3px;
+}
+  
+  
+  .logo {
+    width: 141px;
+    height: 51px;
+  }
+  
+  .main-nav {
+    display: flex;
+    width: 208px;
+    height: 240px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-shrink: 0;
+    padding: 10px 24px;
+  }
+  
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+    width: 208px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 16px;
+    border-radius: 8px;
+    color: #d1d5db;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: Inter, sans-serif;
+    transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .nav-link.active {
+    background-color: #3674b5;
+    color: #fff;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 16px 32px;
+  }
+  
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  
+  .page-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1f2937;
+  }
+  
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .notifications {
+    position: relative;
+  }
+  
+  .notification-indicator {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 9999px;
+    background-color: #3674b5;
+  }
+  
+  .profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 9999px;
+  }
+  
+  .content-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  
+  .search-container {
+    position: relative;
+    width: 256px;
+  }
+  
+  .search-icon {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+  }
+  
+  .search-input {
+    width: 100%;
+    height: 42px;
+    padding-left: 40px;
+    padding-right: 16px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    background-color: #fff;
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 16px;
+  }
+  
+  .filter-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 17px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .add-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 16px;
+    border-radius: 8px;
+    background-color: #3674b5;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .doctors-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+  }
+  
+  .doctor-card {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    background-color: #fff;
+  }
+  
+  .doctor-header {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .doctor-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 9999px;
+  }
+  
+  .doctor-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .doctor-name {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .doctor-specialty {
+    font-size: 16px;
+    color: #6b7280;
+    margin: 0;
+  }
+  
+  .doctor-details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  
+  .contact-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .doctor-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .status-badge {
+    padding: 5px 12px;
+    border-radius: 9999px;
+    font-size: 14px;
+  }
+  
+  .status-badge.available {
+    background-color: #d1fae5;
+    color: #047857;
+  }
+  
+  .status-badge.on-leave {
+    background-color: #fef3c7;
+    color: #b45309;
+  }
+  
+  .options-btn {
+    padding: 2px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+  }
+  
+  .pagination-info {
+    font-size: 14px;
+    color: #4b5563;
+    margin: 0;
+  }
+  
+  .pagination-controls {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .pagination-btn {
+    padding: 11px 18px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .pagination-btn.active {
+    background-color: #3674b5;
+    color: #fff;
+    border: none;
+  }
+  
+  @media (max-width: 991px) {
+    .sidebar {
+      width: 80px;
+    }
+  
+    .logo {
+      width: 40px;
+    }
+  
+    .nav-item span {
+      display: none;
+    }
+  
+    .doctors-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .sidebar {
+      display: none;
+    }
+  
+    .main-content {
+      padding: 16px;
+    }
+  
+    .content-controls {
+      flex-direction: column;
+      gap: 16px;
+    }
+  
+    .search-container {
+      width: 100%;
+    }
+  
+    .action-buttons {
+      width: 100%;
+    }
+  
+    .add-btn {
+      flex: 1;
+    }
+  
+    .doctors-grid {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+  
+    .pagination {
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+  
+
+   /* pop up */
+
+   /* Popup Styles */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #3674b5;
+  color: #fff;
+}
+
+.popup-header h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.popup-form {
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.cancel-btn {
+  padding: 10px 16px;
+  background-color: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.save-btn {
+  padding: 10px 16px;
+  background-color: #3674b5;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Multiple Select Styles */
+select[multiple] {
+  height: auto;
+  min-height: 100px;
+}
+
+select[multiple] option {
+  padding: 8px;
+}
+
+select[multiple] option:checked {
+  background-color: #3674b5;
+  color: white;
+}
+
+/* Time Selection Styles */
+.time-selection {
+  display: flex;
+  gap: 16px;
+}
+
+.time-group {
+  flex: 1;
+}
+
+.time-group label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.time-group select {
+  width: 100%;
+}
+
+/* Compact Popup Styles */
+.popup-content.compact {
+  max-width: 420px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 0;
+}
+
+.popup-header {
+  padding: 16px 20px; /* تقليل الحشوة */
+}
+
+/* Form Row Layout */
+.form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+/* Avatar Upload Styles */
+.avatar-upload {
+  text-align: center;
+}
+
+.avatar-preview {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #f3f4f6;
+  margin: 0 auto 8px;
+  overflow: hidden;
+  border: 2px solid #e5e7eb;
+}
+
+.avatar-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.upload-btn {
+  padding: 8px 12px;
+  background-color: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 100%;
+}
+
+/* Days Dropdown Styles */
+.schedule-selector {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.days-dropdown-btn {
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.days-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  z-index: 1;
+  padding: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.days-dropdown-content label {
+  display: block;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.days-dropdown-content label:hover {
+  background-color: #f3f4f6;
+}
+
+.arrow {
+  margin-left: 8px;
+  font-size: 12px;
+}
+
+/* Scrollbar Styles */
+.popup-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.popup-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.popup-content::-webkit-scrollbar-thumb {
+  background: #3674b5;
+  border-radius: 3px;
+}
+
+.popup-form {
+  padding: 20px;
+}
+
+/* Form Group Improvements */
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #1f2937;
+  font-size: 14px; /* حجم أصغر للتسميات */
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px 12px; /* حشوة متسقة */
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box; /* تضمن أن العرض يشمل الحشو والحدود */
+}
+
+/* Avatar Upload Adjustments */
+.avatar-upload {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.avatar-preview {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 8px;
+}
+#avatarImage{
+  width: 80%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.upload-btn {
+  padding: 8px 12px;
+  font-size: 13px;
+}
+
+/* Days Dropdown Improvements */
+.schedule-selector {
+  margin-top: 8px;
+}
+
+.days-dropdown-btn {
+  padding: 10px 12px;
+}
+
+.days-dropdown-content {
+  padding: 8px 12px;
+}
+
+/* Time Selection Improvements */
+.time-selection {
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.time-selection .form-group {
+  margin-bottom: 0;
+}
+
+/* Form Actions Improvements */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.cancel-btn, .save-btn {
+  padding: 10px 18px;
+  font-size: 14px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+  .popup-content.compact {
+    width: 95%;
+    max-width: 95%;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+}

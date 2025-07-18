@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preload" href="important-image.webp" as="image">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>doctor-profile</title>
+</head>
+<body>
+    
+<nav class="navbar">
+    <div class="navbar-container">
+      <div class="logo-container">
+        <!-- REPLACE WITH YOUR LOGO IMAGE -->
+        <img src="images/logo.svg" alt="App Logo" class="logo" />
+        <p>Divo</p>
+      </div>
+      <div class="navbar-actions">
+        <button class="notification-btn" aria-label="Notifications">
+          <img src="images/bell.svg" alt="Notifications">
+        </button>
+        <img src="images/img1.png" alt="">
+      </div>
+    </div>
+  </nav>
+  
+  <main class="main-content">
+    <header class="doctor-profile">
+      <div class="profile-container">
+        <div class="profile-image-wrapper">
+          <img src="images/img2.png" alt="Dr. Michael Anderson"
+          class="profile-image">
+          <span class="status-indicator"></span>
+        </div>
+        <div class="profile-info">
+          <div class="profile-header">
+            <h1 class="doctor-name">Dr. Michael Anderson</h1>
+            <span class="availability-badge">Available</span>
+          </div>
+          <h2 class="specialty">Cardiologist</h2>
+          <div class="rating-info">
+            <div class="rating">
+              <img src="images/star.svg" alt="">
+              <span class="rating-score">4.9</span>
+            </div>
+            <span class="rating-separator">|</span>
+            <span class="review-count">500+ Reviews</span>
+          </div>
+        </div>
+      </div>
+    </header>
+  
+    <div class="content-grid">
+      <div class="main-column">
+        <section class="info-section">
+          <h2 class="section-title">Doctor Information</h2>
+          <div class="info-grid">
+            <div class="info-item">
+              <img src="images/bag.svg" alt="">
+              <div class="info-content">
+                <h3 class="info-title">Experience</h3>
+                <p class="info-text">15+ years of practice</p>
+              </div>
+            </div>
+  
+            <div class="info-item">
+              <img src="images/hospital.svg" alt="">
+              <div class="info-content">
+                <h3 class="info-title">Hospital</h3>
+                <p class="info-text">MediCare Hospital</p>
+              </div>
+            </div>
+  
+            <div class="info-item">
+              <img src="images/cap.svg" alt="">
+              <div class="info-content">
+                <h3 class="info-title">Education</h3>
+                <p class="info-text">MD - Cardiology, MBBS</p>
+              </div>
+            </div>
+  
+            <div class="info-item">
+              <img src="images/phone.svg" alt="">
+              <div class="info-content">
+                <h3 class="info-title">Contact</h3>
+                <p class="info-text">+1 (555) 123-4567</p>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="appointments-section">
+          <h2 class="section-title">Upcoming Appointments</h2>
+          <div class="appointments-list">
+            <article class="appointment-card">
+              <div class="patient-info">
+                <img src="images/img3.png" alt="Sarah Johnson"
+                class="patient-avatar">
+                <div class="patient-details">
+                  <h3 class="patient-name">Sarah Johnson</h3>
+                  <p class="appointment-type">General Checkup</p>
+                </div>
+              </div>
+              <div class="appointment-details">
+                <p class="appointment-time">Today, 2:00 PM</p>
+                <p class="appointment-status">Confirmed</p>
+              </div>
+            </article>
+  
+            <article class="appointment-card">
+              <div class="patient-info">
+                <img src="images/img4.png" alt="Robert Smith"
+                class="patient-avatar">
+                <div class="patient-details">
+                  <h3 class="patient-name">Robert Smith</h3>
+                  <p class="appointment-type">Follow-up</p>
+                </div>
+              </div>
+              <div class="appointment-details">
+                <p class="appointment-time">Tomorrow, 10:30 AM</p>
+                <p class="appointment-status">Confirmed</p>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+  
+      <aside class="sidebar">
+        <section class="booking-section">
+          <h2 class="section-title">Book Appointment</h2>
+          <form class="booking-form">
+            <div class="form-group">
+              <label for="date" class="form-label">Select Date</label>
+              <input type="date" id="date" class="form-input" required />
+            </div>
+            <div class="form-group">
+              <label for="time" class="form-label">Select Time</label>
+              <select id="time" class="form-select" required>
+                <option value="09:00">09:00 AM</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="reason" class="form-label">Reason for Visit</label>
+              <textarea id="reason" class="form-textarea" required></textarea>
+            </div>
+            <button type="submit" class="book-button">Book Appointment</button>
+          </form>
+        </section>
+  
+        <section class="reviews-section">
+          <h2 class="section-title">Patient Reviews</h2>
+          <div class="rating-summary">
+            <span class="rating-average">4.9</span>
+            <div class="rating-details">
+              <div class="star-rating">
+                <img src="images/small_star.svg" >
+                <img src="images/small_star.svg" >
+                <img src="images/small_star.svg" >
+                <img src="images/small_star.svg" >
+                <img src="images/small_star.svg" >
+              </div>
+              <p class="rating-text">Based on 500+ reviews</p>
+            </div>
+          </div>
+  
+          <div class="reviews-list">
+            <article class="review-card">
+              <div class="reviewer-info">
+                <img src="images/img5.png" alt="Emily Wilson"
+                class="reviewer-avatar">
+                <div class="reviewer-details">
+                  <h3 class="reviewer-name">Emily Wilson</h3>
+                  <div class="reviewer-rating">
+                    <div class="star-rating">
+                      <!-- Star SVGs repeated 5 times -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="review-text">
+                Excellent doctor! Very thorough and professional. Would highly
+                recommend.
+              </p>
+            </article>
+  
+            <article class="review-card">
+              <div class="reviewer-info">
+                <img src="images/img6.png" alt="David Brown"
+                class="reviewer-avatar">
+                <div class="reviewer-details">
+                  <h3 class="reviewer-name">David Brown</h3>
+                  <div class="reviewer-rating">
+                    <div class="star-rating">
+                      <!-- Star SVGs repeated 5 times -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="review-text">
+                Great experience. Dr. Anderson took time to explain everything
+                clearly.
+              </p>
+            </article>
+          </div>
+        </section>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>

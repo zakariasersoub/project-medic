@@ -1,0 +1,587 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif;
+  background-color: rgb(249, 250, 251);
+}
+
+
+.logo-container{
+  display: flex;
+  width: 390px;
+  height: 80px;
+  padding: 0px 111px;
+  justify-content: center;
+  align-items: center;
+  border: 0px solid #E5E7EB;
+  background: rgba(188, 133, 133, 0.00);
+}
+.logo-container p {
+  padding-left: 5px;
+  padding-bottom: 25px;
+  width: 122px;
+  height: 0px;
+  color: #111827;
+  text-align: center;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 60% */
+  letter-spacing: 4px;
+}
+
+.logo{
+  width: 50px;
+  height: 50px;
+  aspect-ratio: 1/1;
+  fill: rgba(0, 0, 0, 0.00);
+}
+
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: screen;
+  background-color: #f9fafb;
+  padding: 24px;
+}
+
+.signup-wrapper {
+  width: 448px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  padding: 16px 32px 34px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 13px;
+  width: 100%;
+}
+
+.brand-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 35px;
+}
+/* 
+.brand-name {
+  color: #111827;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 4px;
+  font-family: Inter, sans-serif;
+  margin: 0;
+} */
+
+.signup-description {
+  color: #4b5563;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 0px;
+  letter-spacing: 0.85px;
+  text-align: center;
+  font-family: Inter, sans-serif;
+  margin-bottom: 32px;
+  margin-top: 0;
+}
+
+.signup-form {
+  width: 100%;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-label {
+  color: #374151;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: Inter, sans-serif;
+}
+
+
+.user-type-buttons {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.user-type-btn {
+  flex: 1;
+  height: 50px;
+  border-radius: 6px;
+  border: 1px solid;
+  font-weight: 600;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    border-color 0.2s;
+}
+
+.patient-btn {
+  background-color: #3674b5;
+  border-color: #3674b5;
+  color: #fff;
+}
+
+.doctor-btn {
+  background-color: transparent;
+  border-color: #d1d5db;
+  color: #374151;
+}
+
+.form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 95%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-input {
+  width: 100%;
+  height: 42px;
+  padding: 0 12px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 16px;
+  transition: border-color 0.2s;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #3674b5;
+}
+
+.password-input-wrapper {
+  position: relative;
+}
+
+
+
+
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 13px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.terms-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.terms-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.terms-checkbox {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  border: 1px solid #d1d5db;
+  cursor: pointer;
+}
+
+.terms-text {
+  font-size: 14px;
+  font-weight: 400;
+  color: #374151;
+}
+
+.terms-link {
+  font-size: 16px;
+  color: #3674b5;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 4px;
+}
+
+.terms-link {
+  color: #3674b5;
+  text-decoration: none;
+}
+
+.terms-link:hover {
+  text-decoration: underline;
+}
+
+.submit-btn {
+  width: 100%;
+  height: 50px;
+  background-color: #3674b5;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 24px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+  background-color: #2c5d91;
+}
+
+.login-text {
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 24px;
+  color: #4b5563;
+}
+
+.login-link{
+  color: #3376bc;
+  font-weight: 700;
+}
+.login-link:hover{
+  text-decoration: underline;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+/* حقول المريض والطبيب */
+.patient-fields,
+.doctor-fields {
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+    width: 95%;
+    animation: fadeIn 0.3s ease;
+}
+
+.common-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 95%;
+}
+
+/* حالة النشاط */
+.patient-active .patient-fields,
+.doctor-active .doctor-fields {
+    display: flex;
+}
+
+.patient-active .patient-btn,
+.doctor-active .doctor-btn {
+    background-color: #3674b5;
+    border-color: #3674b5;
+    color: #fff;
+}
+
+.patient-active .doctor-btn,
+.doctor-active .patient-btn {
+    background-color: transparent;
+    border-color: #d1d5db;
+    color: #374151;
+}
+
+/* تأثير الظهور */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* القائمة المنسدلة للتخصصات */
+.specialty-select {
+    width: 100%;
+    height: 42px;
+    padding: 0 12px;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    font-size: 16px;
+    appearance: none;
+    background-image: url("images/chevron-down.svg");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+}
+
+.specialty-select:focus {
+    outline: none;
+    border-color: #3674b5;
+    border: 1.5px solid #3674b5;
+}
+
+/* Upload Label Styles */
+.upload-label {
+  margin: 0;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 24px;
+  border: 2px dashed #D1D5DB;
+  border-radius: 8px;
+  background-color: #F9FAFB;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.upload-label:hover {
+  border-color: #3674B5;
+  background-color: rgb(253, 253, 253);
+}
+
+.upload-label:active {
+  transform: scale(0.98);
+}
+
+/* SVG Icon Styles */
+.upload-svg-icon {
+  width: 48px;
+  height: 48px;
+  transition: transform 0.3s ease;
+}
+
+.upload-label:hover .upload-svg-icon {
+  transform: translateY(-3px);
+}
+
+/* Text Styles */
+.upload-text {
+  font-weight: 600;
+  color: #111827;
+  font-size: 16px;
+}
+
+.file-requirements {
+  color: #6B7280;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+/* Drag & Drop Effects */
+.upload-label.highlight {
+  border-color: #3674B5;
+  background-color: rgba(54, 116, 181, 0.1);
+  box-shadow: 0 0 0 4px rgba(54, 116, 181, 0.1);
+}
+
+
+/* التعديلات الرئيسية على الهيكل */
+
+
+
+
+/* تعديلات الحقول والعناصر */
+.user-type-buttons,
+.form-fields,
+.patient-fields,
+.doctor-fields,
+.common-fields {
+  width: 100%; /* استخدام العرض الكامل المتاح */
+  margin: 0; /* إزالة أي هوامش خارجية */
+  padding: 0; /* إزالة أي حشوات غير ضرورية */
+}
+
+
+
+
+
+
+
+/* التأكد من أن جميع العناصر تلتزم بالعرض المحدد */
+.form-input,
+.specialty-select,
+.user-type-btn,
+.submit-btn , 
+.upload-label {
+  width: 100%;
+  box-sizing: border-box; /* تضمن أن الحشو لا يزيد العرض */
+}
+
+/* تعديلات للعرض على الشاشات الصغيرة */
+@media (max-width: 480px) {
+  .signup-wrapper {
+    padding: 16px 20px;
+    border-radius: 0;
+  }
+  
+  .user-type-buttons {
+    flex-direction: column; /* ترتيب الأزرار عموديا على الهواتف */
+  }
+  
+  .user-type-btn {
+    width: 100%;
+  }
+}
+
+/* أضف هذا في ملف style.css */
+.remove-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.remove-btn:hover {
+  background-color: #FEE2E2;
+}
+
+.remove-btn svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s ease;
+}
+
+.remove-btn:hover svg {
+  transform: scale(1.1);
+}
+
+.license-preview {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  background: #F9FAFB;
+  border-radius: 6px;
+  padding: 12px;
+  margin-top: 8px;
+  border: 1px solid #E5E7EB;
+}
+
+.file-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.file-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.file-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.file-name {
+  font-weight: 500;
+  color: #111827;
+  font-size: 14px;
+}
+
+.file-size {
+  color: #6B7280;
+  font-size: 12px;
+}
+
+.password-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.password-toggle img {
+  width: 20px;
+  height: 20px;
+  transition: opacity 0.2s ease;
+}
+
+.password-toggle:hover img {
+  opacity: 0.8;
+}
+
+.password-input-wrapper {
+  position: relative;
+}
+
+.password-input-wrapper input {
+  padding-right: 40px; /* إفساح مجال لأيقونة العين */
+}
+
+.password-input-wrapper {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+.form-input {
+  width: 100%;
+  padding-right: 50px; /* زيادة المساحة للأيقونة */
+}
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+}
+
+.password-toggle img.images {
+  width: 24px; /* حجم أكبر */
+  height: 24px;
+  object-fit: contain;
+  transition: all 0.2s ease;
+}
+
+.password-toggle:hover img.images {
+  opacity: 0.8;
+}
+

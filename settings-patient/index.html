@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preload" href="important-image.webp" as="image">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+
+
+<main class="layout">
+  <aside class="sidebar">
+    <div class="logo-container">
+    <!-- REPLACE WITH YOUR LOGO IMAGE -->
+    <img src="images/logo.svg" alt="App Logo" class="logo" />
+    <p>Divo</p>
+    </div>
+    <nav class="main-nav">
+    <ul class="nav-list">
+        <li>
+        <a href="#" class="nav-link ">
+            <!-- REPLACE WITH YOUR HOME ICON -->
+            <img src="images/home.svg" alt="Home" class="nav-icon" />
+            <span>Home</span>
+        </a>
+        </li>
+        <li>
+        <a href="#" class="nav-link">
+            <!-- REPLACE WITH YOUR APPOINTMENTS ICON -->
+            <img src="images/cal.svg" alt="Appointments" class="nav-icon" />
+            <span>Appointments</span>
+        </a>
+        </li>
+        <li>
+        <a href="#" class="nav-link">
+            <!-- REPLACE WITH YOUR PATIENTS ICON -->
+            <img src="images/patient.svg" alt="Patients" class="nav-icon" />
+            <span>Patients</span>
+        </a>
+        </li>
+        <li>
+        <a href="#" class="nav-link ">
+            <!-- REPLACE WITH YOUR DOCTORS ICON -->
+            <img src="images/doctor.svg" alt="Doctors" class="nav-icon" />
+            <span>Doctors</span>
+        </a>
+        </li>
+        <li>
+        <a href="#" class="nav-link active">
+            <!-- REPLACE WITH YOUR SETTINGS ICON -->
+            <img src="images/settings.svg" alt="Settings" class="nav-icon" />
+            <span>Settings</span>
+        </a>
+        </li>
+    </ul>
+    </nav>
+  </aside>
+  
+    <div class="main-content">
+      <header class="header">
+        <h1 class="page-title">Settings</h1>
+        <div class="header-actions">
+          <div class="notifications">
+            <button class="notification-button" aria-label="Notifications">
+              <img src="images/bell.svg" alt="">
+              <span class="notification-indicator"></span>
+            </button>
+          </div>
+          <img src="images/img1.png" alt="">
+        </div>
+      </header>
+  
+      <main class="settings-container">
+        <div class="settings-content">
+          <section class="account-settings">
+            <h2 class="section-title">Account Settings</h2>
+            <div class="settings-form">
+              <div class="profile-photo">
+                <img src="images/img2.png" alt="">
+                <button class="secondary-button">Change Photo</button>
+              </div>
+  
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName" class="form-label">First Name</label>
+                  <input
+                    type="text"
+                    id="firstName"
+                    class="form-input"
+                    value="John"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="lastName" class="form-label">Last Name</label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    class="form-input"
+                    value="Doe"
+                  />
+                </div>
+              </div>
+  
+              <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  class="form-input"
+                  value="john.doe@medicare.com"
+                />
+              </div>
+  
+              <div class="form-group">
+                <label for="phone" class="form-label">Phone</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  class="form-input"
+                  value="+1 234-567-8900"
+                />
+              </div>
+            </div>
+          </section>
+  
+          <section class="security-settings">
+            <h2 class="section-title">Password & Security</h2>
+            <div class="settings-form">
+              <div class="form-group">
+                <label for="currentPassword" class="form-label"
+                  >Current Password</label
+                >
+                <input type="password" id="currentPassword" class="form-input" />
+              </div>
+  
+              <div class="form-group">
+                <label for="newPassword" class="form-label">New Password</label>
+                <input type="password" id="newPassword" class="form-input" />
+              </div>
+  
+              <div class="form-group">
+                <label for="confirmPassword" class="form-label"
+                  >Confirm New Password</label
+                >
+                <input type="password" id="confirmPassword" class="form-input" />
+              </div>
+  
+              <div class="two-factor">
+                <h3 class="subsection-title">Two-Factor Authentication</h3>
+                <div class="two-factor-option">
+                  <div class="option-content">
+                    <h4 class="option-title">Authenticator App</h4>
+                    <p class="option-description">
+                      Use an authenticator app to generate verification codes
+                    </p>
+                  </div>
+                  <div class="toggle-container">
+                    <div class="toggle-switch" id="toggle">
+                        <div class="toggle-slider"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+  
+        <div class="form-actions">
+          <button class="primary-button">Save Changes</button>
+        </div>
+      </main>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById("toggle").addEventListener("click", function() {
+        this.classList.toggle("active");
+    });
+  </script>
+</body>
+</html>

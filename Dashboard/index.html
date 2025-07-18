@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preload" href="important-image.webp" as="image">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Medical Dashboard</title>
+</head>
+<body>
+    <div class="dashboard-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo-container">
+            <!-- REPLACE WITH YOUR LOGO IMAGE -->
+            <img src="images/logo.svg" alt="App Logo" class="logo" />
+            <p>Divo</p>
+            </div>
+            <nav class="main-nav">
+            <ul class="nav-list">
+                <li>
+                <a href="#" class="nav-link active">
+                    <!-- REPLACE WITH YOUR HOME ICON -->
+                    <img src="images/home.svg" alt="Home" class="nav-icon" />
+                    <span>Home</span>
+                </a>
+                </li>
+                <li>
+                <a href="../Appointments/index.html" class="nav-link">
+                    <!-- REPLACE WITH YOUR APPOINTMENTS ICON -->
+                    <img src="images/cal.svg" alt="Appointments" class="nav-icon" />
+                    <span>Appointments</span>
+                </a>
+                </li>
+                <li>
+                <a href="../Patients/index.html" class="nav-link">
+                    <!-- REPLACE WITH YOUR PATIENTS ICON -->
+                    <img src="images/per.svg" alt="Patients" class="nav-icon" />
+                    <span>Patients</span>
+                </a>
+                </li>
+                <li>
+                <a href="../Doctors/index.html" class="nav-link">
+                    <!-- REPLACE WITH YOUR DOCTORS ICON -->
+                    <img src="images/doctor.svg" alt="Doctors" class="nav-icon" />
+                    <span>Doctors</span>
+                </a>
+                </li>
+                <li>
+                <a href="../settings-doctor/index.html" class="nav-link">
+                    <!-- REPLACE WITH YOUR SETTINGS ICON -->
+                    <img src="images/par.svg" alt="Settings" class="nav-icon" />
+                    <span>Settings</span>
+                </a>
+                </li>
+            </ul>
+            </nav>
+        </aside>
+        
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Header Section -->
+            <header class="header">
+                <div class="text">
+                    <h1 class="header-title">Dashboard Overview</h1>
+                    <p class="header-subtitle">Welcome back, Dr. Smith</p>
+                </div>
+                   
+                <div class="header-actions">
+                    <button class="notification-btn" aria-label="Notifications">
+                        <a href="../notifications/index.html">
+                            <!-- REPLACE WITH YOUR NOTIFICATION ICON -->
+                            <img src="images/bell.svg" alt="Notifications" class="notification-icon" />
+                        </a>
+                        </button>
+                    <!-- REPLACE WITH YOUR PROFILE IMAGE -->
+                    <img src="images/img1.png" alt="Profile" class="profile-image" />
+                </div>
+            </header>
+            
+            <!-- Statistics Cards -->
+            <section class="stats-grid">
+                <!-- Total Patients Card -->
+                <article class="stat-card">
+                    <div class="stat-content">
+                        <div class="stat-info">
+                            <h2 class="stat-title">Total Patients</h2>
+                            <p class="stat-value">1,234</p>
+                            <div class="stat-trend">
+                                <div class="trend-icon-wrapper">
+                                    <!-- Replace with your trend up icon -->
+                                    <img src="images/slach.svg" alt="Trend" class="trend-icon">
+                                </div>
+                                <span class="trend-text">12% from last month</span>
+                            </div>
+                        </div>
+                        <!-- Replace with your patients illustration -->
+                        <div class="stat-image-wrapper blue">
+                            <img src="images/people.svg" alt="Patients Illustration" class="stat-image">
+                            
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Total Doctors Card -->
+                <article class="stat-card">
+                    <div class="stat-content">
+                        <div class="stat-info">
+                            <h2 class="stat-title">Total Doctors</h2>
+                            <p class="stat-value">48</p>
+                            <div class="stat-trend">
+                                <div class="trend-icon-wrapper">
+                                    <!-- Replace with your trend up icon -->
+                                    <img src="images/slach.svg" alt="Trend" class="trend-icon">
+                                </div>
+                                <span class="trend-text">8% from last month</span>
+                            </div>
+                        </div>
+                        <!-- Replace with your doctors illustration -->
+                        <div class="stat-image-wrapper green">
+                            <img src="images/green_doctor.svg" alt="Doctors Illustration" class="stat-image">
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Appointments Card -->
+                <article class="stat-card">
+                    <div class="stat-content">
+                        <div class="stat-info">
+                            <h2 class="stat-title">Upcoming Appointments</h2>
+                            <p class="stat-value">156</p>
+                            <div class="stat-trend">
+                                <div class="trend-icon-wrapper">
+                                    <!-- Replace with your trend up icon -->
+                                    <img src="images/slach.svg" alt="Trend" class="trend-icon">
+                                </div>
+                                <span class="trend-text">24% from last week</span>
+                            </div>
+                        </div>
+                        <!-- Replace with your appointments illustration -->
+                        <div class="stat-image-wrapper purple">
+                            <img src="images/purple_cal.svg" alt="Appointments" class="stat-image">
+                        </div>
+                    </div>
+                </article>
+            </section>
+            
+            <!-- Appointments Table -->
+            <section class="appointments-section">
+                <h2 class="section-title">Upcoming Appointments</h2>
+                <div class="table-container">
+                    <table class="appointments-table">
+                        <thead>
+                            <tr>
+                                <th>Patient Name</th>
+                                <th>Doctor Name</th>
+                                <th>Date & Time</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Appointment 1 -->
+                            <tr>
+                                <td>
+                                    <div class="patient-info">
+                                        <!-- Replace with patient avatar -->
+                                        <img src="images/img2.png" alt="Sarah Johnson" class="patient-avatar">
+                                        <span class="patient-name">Sarah Johnson</span>
+                                    </div>
+                                </td>
+                                <td>Dr. Michael Brown</td>
+                                <td>Jan 15, 2025 - 10:00 AM</td>
+                                <td>
+                                    <span class="status-badge status-confirmed">Confirmed</span>
+                                </td>
+                                <td>
+                                    <!-- Replace with actions icon -->
+                                    <img src="images/points.svg" alt="Actions" class="action-icon">
+                                </td>
+                            </tr>
+                            
+                            <!-- Appointment 2 -->
+                            <tr>
+                                <td>
+                                    <div class="patient-info">
+                                        <!-- Replace with patient avatar -->
+                                        <img src="images/img3.png" alt="James Wilson" class="patient-avatar">
+                                        <span class="patient-name">James Wilson</span>
+                                    </div>
+                                </td>
+                                <td>Dr. Emily Davis</td>
+                                <td>Jan 15, 2025 - 11:30 AM</td>
+                                <td>
+                                    <span class="status-badge status-pending">Pending</span>
+                                </td>
+                                <td>
+                                    <!-- Replace with actions icon -->
+                                    <img src="images/points.svg" alt="Actions" class="action-icon">
+                                </td>
+                            </tr>
+                            
+                            <!-- Appointment 3 -->
+                            <tr>
+                                <td>
+                                    <div class="patient-info">
+                                        <!-- Replace with patient avatar -->
+                                        <img src="images/img4.png" alt="Emma Thompson" class="patient-avatar">
+                                        <span class="patient-name">Emma Thompson</span>
+                                    </div>
+                                </td>
+                                <td>Dr. Robert Wilson</td>
+                                <td>Jan 15, 2025 - 2:00 PM</td>
+                                <td>
+                                    <span class="status-badge status-cancelled">Cancelled</span>
+                                </td>
+                                <td>
+                                    <!-- Replace with actions icon -->
+                                    <img src="images/points.svg" alt="Actions" class="action-icon">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

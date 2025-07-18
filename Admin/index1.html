@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Doctors Dashboard</title>
+  </head>
+
+  <body>
+    <div class="dashboard-layout">
+      <aside class="sidebar">
+        <div class="logo-container">
+          <!-- REPLACE WITH YOUR LOGO IMAGE -->
+          <img src="images/logo.svg" alt="App Logo" class="logo" />
+          <p>Divo</p>
+        </div>
+        <nav class="main-nav">
+          <ul class="nav-list">
+            <li>
+              <a href="../Dashboard/index.html" class="nav-link">
+                <!-- REPLACE WITH YOUR HOME ICON -->
+                <img src="images/home.svg" alt="Home" class="nav-icon" />
+                <span>Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="../Appointments/index.html" class="nav-link ">
+                <!-- REPLACE WITH YOUR APPOINTMENTS ICON -->
+                <img src="images/calendry_white.svg" alt="Appointments" class="nav-icon" />
+                <span>Appointments</span>
+              </a>
+            </li>
+            <li>
+              <a href="../Patients/index.html" class="nav-link">
+                <!-- REPLACE WITH YOUR PATIENTS ICON -->
+                <img src="images/patient.svg" alt="Patients" class="nav-icon" />
+                <span>Patients</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link active">
+                <!-- REPLACE WITH YOUR DOCTORS ICON -->
+                <img src="images/doctor.svg" alt="Doctors" class="nav-icon" />
+                <span>Doctors</span>
+              </a>
+            </li>
+            <li>
+              <a href="../settings-doctor/index.html" class="nav-link">
+                <!-- REPLACE WITH YOUR SETTINGS ICON -->
+                <img src="images/parameter.svg" alt="Settings" class="nav-icon" />
+                <span>Settings</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="main-content">
+        <header class="page-header">
+          <h1 class="page-title">Doctors List</h1>
+          <div class="header-actions">
+            <div class="notifications">
+              <a href="../notifications/index.html">
+                <!-- REPLACE WITH YOUR NOTIFICATION ICON -->
+                <img src="images/bell.svg" alt="Notifications" class="notification-icon" />
+              </a>
+            </div>
+            <!-- Profile image -->
+            <img src="images/img1.png" alt="Profile" class="profile-image">
+          </div>
+        </header>
+      
+        <div class="content-controls">
+          <div class="search-container">
+            <!-- Search icon -->
+            <img src="images/search.svg" alt="Search" class="search-icon">
+            <input type="text" placeholder="Search doctors..." class="search-input">
+          </div>
+          <div class="action-buttons">
+            <button class="filter-btn">
+              <!-- Filter icon -->
+              <img src="images/filter.svg" alt="Filter">
+              <span>Filter</span>
+            </button>
+            <button class="add-btn">
+              <!-- Add icon -->
+              <img src="images/add.svg" alt="Add">
+              <span>Add Doctor</span>
+            </button>
+          </div>
+        </div>
+
+        <!--                   cards                    -->
+        
+        <section class="doctors-grid">
+          <!-- Doctor Card 1 -->
+          <article class="doctor-card">
+            <div class="doctor-header">
+              <img src="images/img2.png" alt="Dr. John Smith" class="doctor-avatar">
+              <div class="doctor-info">
+                <h2 class="doctor-name">Dr. John Smith</h2>
+                <p class="doctor-specialty">Cardiologist</p>
+              </div>
+            </div>
+            <div class="doctor-details">
+              <div class="contact-info">
+                <!-- Email icon -->
+                <img src="images/message.svg" alt="Email">
+                <span>john.smith@medicare.com</span>
+              </div>
+              <div class="contact-info">
+                <!-- Phone icon -->
+                <img src="images/phone.svg" alt="Phone">
+                <span>+1 234-567-8900</span>
+              </div>
+              <div class="contact-info">
+                <!-- Calendar icon -->
+                <img src="images/cal.svg" alt="Schedule">
+                <span>Mon - Fri, 9:00 - 17:00</span>
+              </div>
+            </div>
+            <div class="doctor-footer">
+              <span class="status-badge available">Available</span>
+              <!-- Options menu icon -->
+              <button class="options-btn">
+                <img src="images/points.svg" alt="Options">
+              </button>
+            </div>
+          </article>
+      
+          <!-- Doctor Card 2 -->
+          <article class="doctor-card">
+            <div class="doctor-header">
+              <img src="images/img3.png" alt="Dr. Sarah Johnson" class="doctor-avatar">
+              <div class="doctor-info">
+                <h2 class="doctor-name">Dr. Sarah Johnson</h2>
+                <p class="doctor-specialty">Neurologist</p>
+              </div>
+            </div>
+            <div class="doctor-details">
+              <div class="contact-info">
+                <img src="images/message.svg" alt="Email">
+                <span>sarah.j@medicare.com</span>
+              </div>
+              <div class="contact-info">
+                <img src="images/phone.svg" alt="Phone">
+                <span>+1 234-567-8901</span>
+              </div>
+              <div class="contact-info">
+                <img src="images/cal.svg" alt="Schedule">
+                <span>Mon - Thu, 10:00 - 18:00</span>
+              </div>
+            </div>
+            <div class="doctor-footer">
+              <span class="status-badge on-leave">On Leave</span>
+              <button class="options-btn">
+                <img src="images/points.svg" alt="Options">
+              </button>
+            </div>
+          </article>
+      
+          <!-- Doctor Card 3 -->
+          <article class="doctor-card">
+            <div class="doctor-header">
+              <img src="images/img4.png" alt="Dr. Michael Chen" class="doctor-avatar">
+              <div class="doctor-info">
+                <h2 class="doctor-name">Dr. Michael Chen</h2>
+                <p class="doctor-specialty">Pediatrician</p>
+              </div>
+            </div>
+            <div class="doctor-details">
+              <div class="contact-info">
+                <img src="images/message.svg" alt="Email">
+                <span>m.chen@medicare.com</span>
+              </div>
+              <div class="contact-info">
+                <img src="images/phone.svg" alt="Phone">
+                <span>+1 234-567-8902</span>
+              </div>
+              <div class="contact-info">
+                <img src="images/cal.svg" alt="Schedule">
+                <span>Tue - Sat, 8:00 - 16:00</span>
+              </div>
+            </div>
+            <div class="doctor-footer">
+              <span class="status-badge available">Available</span>
+              <button class="options-btn">
+                <img src="images/points.svg" alt="Options">
+              </button>
+            </div>
+          </article>
+        </section>
+        
+        <!--                   cards                    -->
+
+        <footer class="pagination">
+          <p class="pagination-info">Showing 1 to 3 of 12 entries</p>
+          <div class="pagination-controls">
+            <button class="pagination-btn">Previous</button>
+            <button class="pagination-btn active">1</button>
+            <button class="pagination-btn">2</button>
+            <button class="pagination-btn">3</button>
+            <button class="pagination-btn">Next</button>
+          </div>
+        </footer>
+      </main>
+    </div>
+
+    <!-- Popup Form -->
+<!-- Popup Form -->
+<!-- Popup Form -->
+<!-- Popup Form -->
+<!-- Popup Form -->
+<div class="popup-overlay" id="addDoctorPopup">
+  <div class="popup-content compact">
+    <div class="popup-header">
+      <h2>Add New Doctor</h2>
+      <button class="close-btn">&times;</button>
+    </div>
+    <form id="doctorForm" class="popup-form" enctype="multipart/form-data">
+      <div class="form-row">
+        <div class="form-group avatar-upload">
+          <label for="doctorAvatar">Photo</label>
+          <div class="avatar-preview" id="avatarPreview">
+            <img src="images/doctor.svg" alt="Preview" id="avatarImage">
+          </div>
+          <input type="file" id="doctorAvatar" name="avatar" accept="image/*" style="display: none;">
+          <button type="button" class="upload-btn" id="uploadBtn">Choose Image</button>
+        </div>
+        <div class="form-group">
+          <label for="doctorName">Full Name</label>
+          <input type="text" id="doctorName" name="name" required>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="doctorSpecialty">Specialty</label>
+        <select id="doctorSpecialty" name="specialty" required>
+          <option value="">Select Specialty</option>
+          <option value="Cardiologist">Cardiologist</option>
+          <option value="Neurologist">Neurologist</option>
+          <option value="Pediatrician">Pediatrician</option>
+          <option value="Dermatologist">Dermatologist</option>
+        </select>
+      </div>
+      
+      <div class="form-row">
+        <div class="form-group">
+          <label for="doctorEmail">Email</label>
+          <input type="email" id="doctorEmail" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="doctorPhone">Phone</label>
+          <input type="tel" id="doctorPhone" name="phone" required>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="doctorClinic">Clinic</label>
+        <input type="text" id="doctorClinic" name="clinic" required>
+      </div>
+      
+      <div class="form-actions">
+        <button type="button" class="cancel-btn">Cancel</button>
+        <button type="submit" class="save-btn">Save Doctor</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="script.js"></script>
+  </body>
+</html>

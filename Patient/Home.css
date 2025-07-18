@@ -1,0 +1,392 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif;
+  background-color: rgb(249, 250, 251);
+}
+
+/* أضف هذا في ملف CSS */
+img {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+img.loading {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+img.loaded {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.sidebar {
+  position: fixed; /* Changed to fixed positioning */
+  top: 0;
+  left: 0;
+  bottom: 0; /* Stretch from top to bottom */
+  width: 256px;
+  background-color: #1e293b;
+  overflow-y: auto; /* Allow scrolling if content is too tall */
+  z-index: 100; /* Ensure it stays above other content */
+  display: flex;
+  flex-direction: column;
+  /* Remove margin-bottom as it's not needed with fixed positioning */
+}
+
+.main-content {
+  flex: 1;
+  padding: 16px 32px;
+  margin-left: 256px; /* Add margin to prevent content from being hidden behind sidebar */
+  width: calc(100% - 256px); /* Calculate remaining width */
+}
+
+.dashboard-layout{
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .sidebar {
+    display: none; /* Hide sidebar on smaller screens */
+  }
+  
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 16px;
+  }
+}
+.logo-container {
+  display: flex;
+  height: 64px;
+  padding: 13px 90.815px 0 24px;
+  align-items: center;
+}
+  .logo-container p {
+    display: flex;
+    width: 93.385px;
+    height: 25.097px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #FFF;
+
+    font-size: 22px;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 3.3px;
+}
+  
+  
+  .logo {
+    width: 141px;
+    height: 51px;
+  }
+  
+  .main-nav {
+    display: flex;
+    width: 208px;
+    height: 240px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-shrink: 0;
+    padding: 10px 24px;
+  }
+  
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+    width: 208px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 16px;
+    border-radius: 8px;
+    color: #d1d5db;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: Inter, sans-serif;
+    transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .nav-link.active {
+    background-color: #3674b5;
+    color: #fff;
+  }
+
+  /* Main Content Area */
+
+  .main-content {
+    flex: 1;
+    padding: 16px 32px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+
+  .header-title{
+    color: #1f2937;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: Inter, sans-serif;
+    margin: 0;
+  }
+
+  .header-subtitle{
+    color: #1f2937;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: Inter, sans-serif;
+    margin: 0;
+  }
+  
+  .page-title {
+    color: #1f2937;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: Inter, sans-serif;
+    margin: 0;
+  }
+  
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .notification-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 9999px;
+  }
+  /* Stats Grid */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 29px;
+  }
+  
+  .stat-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    padding: 24px;
+  }
+  
+  .stat-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .stat-title {
+    color: rgb(107, 114, 128);
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+  }
+  
+  .stat-value {
+    color: black;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 18px 0;
+  }
+  
+  .stat-trend {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .trend-icon-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  .trend-icon {
+    width: 11px;
+    height: auto;
+  }
+  
+  .trend-text {
+    color: rgb(16, 185, 129);
+    font-size: 14px;
+  }
+  
+  .stat-image {
+    width: 20px;
+    height: 16px;
+  }
+
+  .stat-image-wrapper{
+    display: flex;
+    width: 44px;
+    height: 40px;
+    /* padding: 12px 12px 11px 12px; */
+    justify-content: center;
+    align-items: center;
+    border-radius: 9999px;
+    border: 0px solid #E5E7EB;
+  }
+
+  .purple{
+    background: #EDE9FE;
+  }
+  .blue{
+    background: #DBEAFE;
+  }
+  .green{
+    background: #D1FAE5;
+  }
+
+
+
+  /* Appointments Section */
+  .appointments-section {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .section-title {
+    padding: 28px 24px;
+    font-size: 20px;
+    color: rgb(31, 41, 55);
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .appointments-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .appointments-table th {
+    background-color: rgb(249, 250, 251);
+    padding: 16px 24px;
+    text-align: left;
+    font-size: 12px;
+    color: rgb(107, 114, 128);
+    font-weight: 500;
+  }
+  
+  .appointments-table td {
+    padding: 17px 24px;
+    font-size: 16px;
+    color: black;
+  }
+  
+  .patient-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .patient-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 9999px;
+    object-fit: contain;
+  }
+  
+  .status-badge {
+    padding: 7px 12px;
+    border-radius: 9999px;
+    font-size: 14px;
+  }
+  
+  .status-confirmed {
+    background-color: rgb(209, 250, 229);
+    color: rgb(4, 120, 87);
+  }
+  
+  .status-pending {
+    background-color: rgb(254, 243, 199);
+    color: rgb(180, 83, 9);
+  }
+  
+  .status-cancelled {
+    background-color: rgb(254, 226, 226);
+    color: rgb(185, 28, 28);
+  }
+  
+  .action-icon {
+    width: 4px;
+    height: 16px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 991px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: static;
+    }
+  
+    .nav-menu {
+      margin: 10px;
+    }
+  
+    .main-content {
+      margin-left: 0;
+      padding: 20px;
+    }
+  
+    .stats-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .header-content {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .header-profile {
+      margin-top: 20px;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .sidebar {
+      display: none;
+    }
+  
+    .appointments-table {
+      display: block;
+      overflow-x: auto;
+    }
+  }
+  

@@ -1,0 +1,527 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  body {
+    background-color: #f9fafb;
+  }
+
+/* أضف هذا في ملف CSS */
+img {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+img.loading {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+img.loaded {
+  opacity: 1;
+  transform: scale(1);
+}
+  
+  /* Navbar */
+  .navbar {
+    background-color: #fff;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    height: 72px;
+    width: 100%;
+  }
+  
+  .navbar-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 6px 80px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo-container {
+    display: flex;
+    height: 64px;
+    padding: 13px 90.815px 0 24px;
+    align-items: center;
+  }
+    .logo-container p {
+      display: flex;
+      width: 93.385px;
+      height: 25.097px;
+      flex-direction: column;
+      justify-content: center;
+      flex-shrink: 0;
+      color: black;
+      font-size: 22px;
+      font-weight: 600;
+      line-height: normal;
+      letter-spacing: 3.3px;
+  }
+    
+    
+    .logo {
+      width: 42.239px;
+      height: 59px;
+      margin-right: 12px;
+    }
+    
+
+  
+  .navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .notification-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+  }
+  
+  .user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 9999px;
+  }
+  
+  /* Main Content */
+  .main-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 32px 24px;
+  }
+  
+  /* Doctor Profile Header */
+  .doctor-profile {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    margin-bottom: 32px;
+  }
+  
+  .profile-container {
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+  }
+  
+  .profile-image-wrapper {
+    position: relative;
+    width: 128px;
+    height: 128px;
+  }
+  
+  .profile-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 9999px;
+    object-fit: cover;
+  }
+  
+  .status-indicator {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    width: 16px;
+    height: 16px;
+    background-color: #10b981;
+    border: 2px solid #fff;
+    border-radius: 9999px;
+  }
+  
+  .profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .profile-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .doctor-name {
+    font-size: 30px;
+    font-weight: 700;
+    color: #1f2937;
+  }
+  
+  .availability-badge {
+    background-color: #d1fae5;
+    color: #059669;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-size: 14px;
+  }
+  
+  .specialty {
+    font-size: 20px;
+    color: #4b5563;
+  }
+  
+  .rating-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .rating-score {
+    font-size: 16px;
+    color: #374151;
+  }
+  
+  .rating-separator {
+    color: #d1d5db;
+  }
+  
+  .review-count {
+    color: #4b5563;
+  }
+  
+  /* Content Grid */
+  .content-grid {
+    display: flex;
+    gap: 32px;
+  }
+  
+  .main-column {
+    flex: 1;
+  }
+  
+  /* Info Section */
+  .info-section {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 32px;
+    margin-bottom: 32px;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  }
+  
+  .section-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 24px;
+  }
+  
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  
+  .info-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .info-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .info-title {
+    font-size: 16px;
+    color: #1f2937;
+  }
+  
+  .info-text {
+    font-size: 16px;
+    color: #4b5563;
+  }
+  
+  /* Appointments Section */
+  .appointments-section {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  }
+  
+  .appointments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .appointment-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+  }
+  
+  .patient-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .patient-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 9999px;
+  }
+  
+  .patient-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .patient-name {
+    font-size: 16px;
+    color: #000;
+  }
+  
+  .appointment-type {
+    font-size: 14px;
+    color: #4b5563;
+  }
+  
+  .appointment-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .appointment-time {
+    font-size: 16px;
+    color: #000;
+  }
+  
+  .appointment-status {
+    font-size: 14px;
+    color: #2563eb;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 389px;
+  }
+  
+  /* Booking Section */
+  .booking-section {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 32px;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  }
+  
+  .booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .form-label {
+    font-size: 14px;
+    color: #374151;
+  }
+  
+  .form-input,
+  .form-select {
+    width: 100%;
+    height: 44px;
+    padding: 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+  }
+  
+  .form-textarea {
+    width: 100%;
+    height: 90px;
+    padding: 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    resize: vertical;
+  }
+  
+  .book-button {
+    width: 100%;
+    height: 48px;
+    background-color: #3674b5;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .book-button:hover {
+    background-color: #2b5d91;
+  }
+  
+  /* Reviews Section */
+  .reviews-section {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  }
+  
+  .rating-summary {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  
+  .rating-average {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1f2937;
+  }
+  
+  .rating-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .star-rating {
+    display: flex;
+  }
+  
+  .rating-text {
+    font-size: 14px;
+    color: #4b5563;
+  }
+  
+  .reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .review-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-bottom: 33px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .reviewer-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .reviewer-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 9999px;
+  }
+  
+  .reviewer-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .reviewer-name {
+    font-size: 16px;
+    color: #000;
+  }
+  
+  .review-text {
+    font-size: 14px;
+    color: #4b5563;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 991px) {
+    .navbar-container {
+      padding: 6px 40px;
+    }
+  
+    .content-grid {
+      flex-direction: column;
+    }
+  
+    .sidebar {
+      width: 100%;
+    }
+  
+    .doctor-name {
+      font-size: 24px;
+    }
+  
+    .specialty {
+      font-size: 18px;
+    }
+  
+    .info-section,
+    .appointments-section,
+    .booking-section,
+    .reviews-section {
+      padding: 24px;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .navbar-container {
+      padding: 6px 20px;
+    }
+  
+    .profile-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .profile-image-wrapper {
+      width: 96px;
+      height: 96px;
+    }
+  
+    .profile-header {
+      flex-direction: column;
+      gap: 8px;
+    }
+  
+    .doctor-name {
+      font-size: 20px;
+    }
+  
+    .specialty {
+      font-size: 16px;
+    }
+  
+    .info-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .info-section,
+    .appointments-section,
+    .booking-section,
+    .reviews-section {
+      padding: 16px;
+    }
+  }
+  

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="preload" href="important-image.webp" as="image">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Patients List</title>
+</head>
+
+<body>
+
+  <aside class="sidebar">
+    <div class="logo-container">
+      <!-- REPLACE WITH YOUR LOGO IMAGE -->
+      <img src="images/logo.svg" alt="App Logo" class="logo" />
+      <p>Divo</p>
+    </div>
+    <nav class="main-nav">
+      <ul class="nav-list">
+        <li>
+          <a href="../Dashboard/index.html" class="nav-link">
+            <!-- REPLACE WITH YOUR HOME ICON -->
+            <img src="images/home.svg" alt="Home" class="nav-icon" />
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="../Appointments/index.html" class="nav-link ">
+            <!-- REPLACE WITH YOUR APPOINTMENTS ICON -->
+            <img src="images/calendry_white.svg" alt="Appointments" class="nav-icon" />
+            <span>Appointments</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link active">
+            <!-- REPLACE WITH YOUR PATIENTS ICON -->
+            <img src="images/patient.svg" alt="Patients" class="nav-icon" />
+            <span>Patients</span>
+          </a>
+        </li>
+        <li>
+          <a href="../Doctors/index.html" class="nav-link ">
+            <!-- REPLACE WITH YOUR DOCTORS ICON -->
+            <img src="images/doctor.svg" alt="Doctors" class="nav-icon" />
+            <span>Doctors</span>
+          </a>
+        </li>
+        <li>
+          <a href="../settings-doctor/index.html" class="nav-link">
+            <!-- REPLACE WITH YOUR SETTINGS ICON -->
+            <img src="images/settings.svg" alt="Settings" class="nav-icon" />
+            <span>Settings</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <header class="content-header">
+      <div class="header">
+        <h1 class="page-title">Patients List</h1>
+        <div class="header-actions">
+          <button class="notification-btn" aria-label="Notifications">
+            <a href="../notifications/index.html">
+              <!-- REPLACE WITH YOUR NOTIFICATION ICON -->
+              <img src="images/bell.svg" alt="Notifications" class="notification-icon" />
+            </a>
+          </button>
+          <!-- REPLACE WITH YOUR PROFILE IMAGE -->
+          <img src="images/img1.png" alt="Profile" class="profile-image" />
+        </div>
+      </div>
+
+      <div class="controls-bar">
+        <div class="search-wrapper">
+          <div class="search-input">
+            <div class="icon-wrapper">
+              <img src="images/search.svg" alt="Search" class="search-icon" />
+            </div>
+            <input type="text" placeholder="Search patients..." class="search-field" />
+          </div>
+        </div>
+
+        <div class="action-buttons">
+          <button class="btn btn-secondary">
+            <img src="images/filter.svg" alt="" class="btn-icon" />
+            <span>Filter</span>
+          </button>
+          <button class="btn btn-primary">
+            <img src="images/add.svg" alt="" class="btn-icon" />
+            <span>Add Patient</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="table-container">
+      <table class="patients-table">
+        <thead>
+          <tr>
+            <th>Patient Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Contact</th>
+            <th>Last Visit</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="patient-info">
+                <img src="images/img1.png" alt="" class="patient-avatar" />
+                <div class="patient-details">
+                  <div class="patient-name">Sarah Johnson</div>
+                  <div class="patient-id">#PT-0025</div>
+                </div>
+              </div>
+            </td>
+            <td>32</td>
+            <td>Female</td>
+            <td>+1 234-567-8900</td>
+            <td>Mar 15, 2025</td>
+            <td>
+              <span class="status-badge status-active">Active</span>
+            </td>
+            <td>
+              <img src="images/points.svg" alt="Actions" class="action-icon" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="patient-info">
+                <img src="images/img2.png" alt="" class="patient-avatar" />
+                <div class="patient-details">
+                  <div class="patient-name">Michael Brown</div>
+                  <div class="patient-id">#PT-0026</div>
+                </div>
+              </div>
+            </td>
+            <td>45</td>
+            <td>Male</td>
+            <td>+1 234-567-8901</td>
+            <td>Mar 10, 2025</td>
+            <td>
+              <span class="status-badge status-active">Active</span>
+            </td>
+            <td>
+              <img src="images/points.svg" alt="Actions" class="action-icon" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="patient-info">
+                <img src="images/img3.png" alt="" class="patient-avatar" />
+                <div class="patient-details">
+                  <div class="patient-name">Emily Wilson</div>
+                  <div class="patient-id">#PT-0027</div>
+                </div>
+              </div>
+            </td>
+            <td>28</td>
+            <td>Female</td>
+            <td>+1 234-567-8902</td>
+            <td>Mar 5, 2025</td>
+            <td>
+              <span class="status-badge status-pending">Pending</span>
+            </td>
+            <td>
+              <img src="images/points.svg" alt="Actions" class="action-icon" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="patient-info">
+                <img src="images/img4.png" alt="" class="patient-avatar" />
+                <div class="patient-details">
+                  <div class="patient-name">David Chen</div>
+                  <div class="patient-id">#PT-0028</div>
+                </div>
+              </div>
+            </td>
+            <td>52</td>
+            <td>Male</td>
+            <td>+1 234-567-8903</td>
+            <td>Mar 1, 2025</td>
+            <td>
+              <span class="status-badge status-inactive">Inactive</span>
+            </td>
+            <td>
+              <img src="images/points.svg" alt="Actions" class="action-icon" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="table-footer">
+        <div class="entries-info">
+          Showing 1 to 4 of 50 entries
+        </div>
+        <div class="pagination">
+          <button class="page-btn">Previous</button>
+          <button class="page-btn active">1</button>
+          <button class="page-btn">2</button>
+          <button class="page-btn">3</button>
+          <button class="page-btn">Next</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+</body>
+
+</html>

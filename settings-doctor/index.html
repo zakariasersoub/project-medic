@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preload" href="important-image.webp" as="image">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Settings-doctor</title>
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="logo-container">
+      <!-- REPLACE WITH YOUR LOGO IMAGE -->
+      <img src="images/logo.svg" alt="App Logo" class="logo" />
+      <p>Divo</p>
+      </div>
+      <nav class="main-nav">
+      <ul class="nav-list">
+          <li>
+          <a href="../Dashboard/index.html" class="nav-link ">
+              <!-- REPLACE WITH YOUR HOME ICON -->
+              <img src="images/home.svg" alt="Home" class="nav-icon" />
+              <span>Home</span>
+          </a>
+          </li>
+          <li>
+          <a href="../Appointments/index.html" class="nav-link">
+              <!-- REPLACE WITH YOUR APPOINTMENTS ICON -->
+              <img src="images/cal.svg" alt="Appointments" class="nav-icon" />
+              <span>Appointments</span>
+          </a>
+          </li>
+          <li>
+          <a href="../Patients/index.html" class="nav-link">
+              <!-- REPLACE WITH YOUR PATIENTS ICON -->
+              <img src="images/patient.svg" alt="Patients" class="nav-icon" />
+              <span>Patients</span>
+          </a>
+          </li>
+          <li>
+          <a href="../Doctors/index.html" class="nav-link ">
+              <!-- REPLACE WITH YOUR DOCTORS ICON -->
+              <img src="images/doctor.svg" alt="Doctors" class="nav-icon" />
+              <span>Doctors</span>
+          </a>
+          </li>
+          <li>
+          <a href="#" class="nav-link active">
+              <!-- REPLACE WITH YOUR SETTINGS ICON -->
+              <img src="images/settings.svg" alt="Settings" class="nav-icon" />
+              <span>Settings</span>
+          </a>
+          </li>
+      </ul>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header class="page-header">
+        <h1 class="page-title">Settings</h1>
+        <div class="user-profile">
+          <div class="notification-wrapper">
+            <div class="notification-indicator"></div>
+          </div>
+          <img src="images/img1.png" alt="profile">
+        </div>
+      </header>
+
+      <div class="settings-container">
+        <div class="settings-grid">
+          <section class="settings-card profile-settings">
+            <h2 class="section-title">Profile Settings</h2>
+            <div class="profile-photo-section">
+              <img src="images/img2.png" alt="Profile photo"
+              class="profile-photo">
+              <div class="profile-photo-details">
+                <h3 class="subsection-title">Profile Photo</h3>
+                <p class="helper-text">
+                  Upload a new photo or remove the current one
+                </p>
+                <div class="button-group">
+                  <button class="btn btn-primary">Upload New</button>
+                  <button class="btn btn-secondary">Remove</button>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-field">
+                <label for="fullName" class="form-label">Full Name</label>
+                <input
+                  type="text"
+                  id="fullName"
+                  class="form-input"
+                  value="Dr. John Smith"
+                />
+              </div>
+              <div class="form-field">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  class="form-input"
+                  value="john.smith@medicare.com"
+                />
+              </div>
+              <div class="form-field">
+                <label for="phone" class="form-label">Phone</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  class="form-input"
+                  value="+1 234-567-8900"
+                />
+              </div>
+            </div>
+          </section>
+
+          <section class="settings-card account-settings">
+            <h2 class="section-title">Account Settings</h2>
+            <div class="form-group">
+              <div class="form-field">
+                <label for="language" class="form-label">Language</label>
+                <select id="language" class="form-select">
+                  <option>English (US)</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="timezone" class="form-label">Time Zone</label>
+                <select id="timezone" class="form-select">
+                  <option>(GMT-08:00) Pacific Time</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label class="form-label">Notifications</label>
+                <div class="checkbox-group">
+                  <label class="checkbox-label">
+                    <input type="checkbox" class="checkbox-input" />
+                    <span class="checkbox-text">Email notifications</span>
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" class="checkbox-input" />
+                    <span class="checkbox-text">SMS notifications</span>
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" class="checkbox-input" />
+                    <span class="checkbox-text">Desktop notifications</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="settings-grid">
+          <section class="settings-card security-settings">
+            <h2 class="section-title">Security Settings</h2>
+            <div class="form-group">
+              <div class="password-section">
+                <h3 class="subsection-title">Change Password</h3>
+                <div class="password-fields">
+                  <input
+                    type="password"
+                    class="form-input"
+                    placeholder="Current Password"
+                  />
+                  <input
+                    type="password"
+                    class="form-input"
+                    placeholder="New Password"
+                  />
+                  <input
+                    type="password"
+                    class="form-input"
+                    placeholder="Confirm New Password"
+                  />
+                </div>
+              </div>
+              <div class="two-factor-section">
+                <h3 class="subsection-title">Two-Factor Authentication</h3>
+                <div class="two-factor-toggle">
+                  <span class="helper-text">Secure your account with 2FA</span>
+                  <label class="toggle-switch">
+                    <input type="checkbox" class="toggle-input" />
+                    <span class="toggle-slider"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="settings-card working-hours">
+            <h2 class="section-title">Working Hours</h2>
+            <div class="working-hours-grid">
+              <div class="time-slot">
+                <span class="day-label">Monday</span>
+                <div class="time-inputs">
+                  <input type="time" value="09:00" class="time-input" />
+                  <span class="time-separator">to</span>
+                  <input type="time" value="17:00" class="time-input" />
+                </div>
+              </div>
+              <div class="time-slot">
+                <span class="day-label">Tuesday</span>
+                <div class="time-inputs">
+                  <input type="time" value="09:00" class="time-input" />
+                  <span class="time-separator">to</span>
+                  <input type="time" value="17:00" class="time-input" />
+                </div>
+              </div>
+              <div class="time-slot">
+                <span class="day-label">Wednesday</span>
+                <div class="time-inputs">
+                  <input type="time" value="09:00" class="time-input" />
+                  <span class="time-separator">to</span>
+                  <input type="time" value="17:00" class="time-input" />
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="settings-actions">
+          <button class="btn btn-primary save-button">Save Changes</button>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="preload" href="important-image.webp" as="image">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css" />
+  <title>Notifications</title>
+</head>
+
+<body>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <main class="notifications-page">
+    <header class="page-header">
+      <div class="header-container">
+        <h1 class="page-title">Notifications</h1>
+        <button class="mark-read-btn">Mark all as read</button>
+      </div>
+    </header>
+
+    <section class="main-content">
+      <nav class="filter-tabs" role="tablist">
+        <button class="filter-tab" role="tab" aria-selected="true">
+          All
+        </button>
+        <button class="filter-tab" role="tab" aria-selected="false">
+          Unread
+        </button>
+        <button class="filter-tab" role="tab" aria-selected="false">
+          Important
+        </button>
+      </nav>
+
+      <div class="notifications-list">
+        <article class="notification-item NOTE1">
+          <div class="notification-icon-wrapper blue">
+            <img src="images/cal.svg" alt="" >
+            <span class="unread-indicator" aria-hidden="true"></span>
+          </div>
+          <div class="notification-content">
+            <p class="notification-message">
+              A new appointment has been booked with Dr. Emily Davis on Jan
+              15, 2025, at 11:30 AM.
+            </p>
+            <time class="notification-time">2 hours ago</time>
+          </div>
+        </article>
+
+        <article class="notification-item NOTE2">
+          <div class="notification-icon-wrapper orange">
+            <img src="images/notcal1.svg" alt="">
+          </div>
+          <div class="notification-content">
+            <p class="notification-message">
+              An appointment with Dr. Robert Wilson has been canceled.
+            </p>
+            <time class="notification-time">5 hours ago</time>
+          </div>
+        </article>
+
+        <article class="notification-item NOTE3">
+          <div class="notification-icon-wrapper green">
+            <img src="images/message.svg" alt="">
+          </div>
+          <div class="notification-content">
+            <p class="notification-message">
+              Dr. Sarah Johnson sent you a message regarding your upcoming
+              appointment.
+            </p>
+            <time class="notification-time">Yesterday</time>
+          </div>
+        </article>
+
+        <article class="notification-item NOTE4">
+          <div class="notification-icon-wrapper purple">
+            <img src="images/bell.svg" alt="">
+          </div>
+          <div class="notification-content">
+            <p class="notification-message">
+              Reminder: Your appointment with Dr. Michael Brown is tomorrow at
+              2:00 PM.
+            </p>
+            <time class="notification-time">Yesterday</time>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+<script src="./script.js"></script>
+</body>
+
+
+</html>
